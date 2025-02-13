@@ -1,0 +1,19 @@
+{
+    "responsive-facade": {
+      "title": "Responsive Facade",
+      "description": "A detailed look into the responsive facade design...",
+      "images": [
+        "src/assets/images/responsive/04.png",
+        "src/assets/images/responsive/05.png"
+      ]
+    },
+    "wave-structure": {
+      "title": "Wave Structure",
+      "description": "An exploration of wave-inspired architectural forms...",
+      "images": [
+        "src/assets/images/waves/012.png",
+        "src/assets/images/waves/013.png"
+      ]
+    }
+  }
+  
