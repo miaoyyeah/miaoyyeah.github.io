@@ -94,8 +94,8 @@ export default function Main() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center mt-32 text-[#828282] text-lg">
-        Miaoyang Ye 2025
+      <footer id="contacts" className="text-center py-6 mt-12">
+        <p class="text-gray-500">Miaoyang Ye 2025 | <a href="mailto:miaoyany@andrew.cmu.edu" className="underline text-gray-500">miaoyany@andrew.cmu.edu</a></p>
       </footer>
     </div>
   );
