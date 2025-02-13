@@ -8,6 +8,7 @@ import Generative from './page/project/Generative-building';
 import BuildingOptimization from './page/project/Building-optimization';
 import DataImputation from './page/project/Self-supervised-building-energy-data-imputation';
 import Slimes from './page/project/Slimes';
+import Petpals from './page/project/Petpals';
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/project/building-optimization" element={<BuildingOptimization />} />
         <Route path="/project/self-supervised-building-energy-data-imputation" element={<DataImputation />} />
         <Route path="/project/slimes" element={<Slimes />} />
+        <Route path="/project/petpals" element={<Petpals />} />
         <Route path="/project/:name" element={<ProjectDetail />} />
       </Routes>
     </Router>

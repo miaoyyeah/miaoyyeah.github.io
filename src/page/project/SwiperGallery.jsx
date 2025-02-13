@@ -10,6 +10,12 @@ export default function SwiperGallery({ folder }) {
   const [images, setImages] = useState([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const getVideoType = (src) => {
+    if (src.endsWith('.mov')) return 'video/quicktime';
+    if (src.endsWith('.mp4')) return 'video/mp4';
+    return 'video/mp4';
+  };
+
   return (
     <div className="max-w-screen-lg mx-auto py-1">
       {/* Load images and pass to Swiper */}
@@ -33,8 +39,12 @@ export default function SwiperGallery({ folder }) {
             {item.type === 'video' ? (
               <video 
                 controls 
-                className="max-w-full h-auto mx-auto block rounded-lg object-contain">
-                <source src={item.src} type="video/mp4" />
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-auto mx-auto block rounded-lg object-cover">
+                  <source src={item.src} type={getVideoType(item.src)} />
                 Your browser does not support the video tag.
               </video>
             ) : (
@@ -57,8 +67,9 @@ export default function SwiperGallery({ folder }) {
         {images.map((item, index) => (
           <SwiperSlide key={index}>
             {item.type === 'video' ? (
-              <video className="w-full h-auto rounded-lg">
-                <source src={item.src} type="video/mp4" />
+              <video 
+                className="w-full h-auto rounded-lg">
+                  <source src={item.src} type={getVideoType(item.src)} />
               </video>
             ) : (
               <img src={item.src} alt={`Thumbnail ${index}`} className="w-full h-auto rounded-lg" />
